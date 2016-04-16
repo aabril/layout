@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "jade": "./node_modules/jade/bin/jade.js --watch src/jade/index.jade -o dist/",
     "stylus": "./node_modules/stylus/bin/stylus --watch --compress src/stylus/main.styl -o dist/style.min.css",
+    "js" : "./node_modules/webpack/bin/webpack.js --optimize-minimize --watch src/js/main.js dist/bundle.min.js",
     "stylus-dev": "./node_modules/stylus/bin/stylus --watch src/stylus/main.styl -o dist/style.min.css",
     "copy-assets": "./node_modules/watch/cli.js 'cp -R src/assets dist' src/assets",
-    "clean" : "rm -rf ./dist/*",
+    "clean": "rm -rf ./dist/*",
     "serve": "./node_modules/serve/bin/serve dist/",
     "livereload": "./node_modules/livereload/bin/livereload.js ./dist",
-    "start": "./node_modules/npm-run-all/bin/npm-run-all.js clean --parallel jade stylus copy-assets livereload serve"
+    "start": "./node_modules/npm-run-all/bin/npm-run-all.js clean --parallel jade stylus js copy-assets livereload serve"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "npm-run-all": "^1.7.0",
     "serve": "^1.4.0",
     "stylus": "^0.54.2",
-    "watch": "^0.17.1"
+    "watch": "^0.17.1",
+    "webpack": "^1.13.0"
   }
 }
