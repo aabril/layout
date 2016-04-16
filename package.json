@@ -9,12 +9,14 @@
     "stylus": "./node_modules/stylus/bin/stylus --watch --compress src/stylus/main.styl -o dist/style.min.css",
     "stylus-dev": "./node_modules/stylus/bin/stylus --watch src/stylus/main.styl -o dist/style.min.css",
     "serve": "./node_modules/serve/bin/serve dist/",
-    "start" : "./node_modules/npm-run-all/bin/npm-run-all.js --parallel jade stylus serve"
+    "livereload" : "./node_modules/livereload/bin/livereload.js ./dist",
+    "start": "./node_modules/npm-run-all/bin/npm-run-all.js --parallel jade stylus livereload serve"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jade": "^1.11.0",
+    "livereload": "^0.4.1",
     "npm-run-all": "^1.7.0",
     "serve": "^1.4.0",
     "stylus": "^0.54.2"
