@@ -11,16 +11,22 @@ html(lang='en')
     link(rel='icon', type='image/png', href='images/favicon.png')
   body
 
-    //- include navsidebar
-    //- include container
+    //- include layout1
+    //- include layout2
 
-    .container
-        .four.columns.sidebar
-            nav
-                p hola sidebar
-        .nine.columns.content
-            article
-                p hola content
+    .sidebar.span4.bg2
+      | this is my fixed sidebar
+    .main
+      .container-fluid
+        .row-fluid
+          .span2 this is fluid
+          .span3.offset1 yeah!
+          .span6 Awesome!
+        .row-fluid
+          .span6 1 half
+          .span6 2 half
+
+
 
 
     script(src='bundle.min.js')
