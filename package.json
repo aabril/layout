@@ -12,8 +12,9 @@
     "copy-assets": "./node_modules/watch/cli.js 'cp -R src/assets dist' src/assets",
     "clean": "rm -rf ./dist/*",
     "serve": "./node_modules/serve/bin/serve dist/",
+    "open" : "sleep 4 ; open http://localhost:3000",
     "livereload": "./node_modules/livereload/bin/livereload.js ./dist",
-    "start": "./node_modules/npm-run-all/bin/npm-run-all.js clean --parallel jade stylus js copy-assets livereload serve"
+    "start": "./node_modules/npm-run-all/bin/npm-run-all.js clean --parallel jade stylus js copy-assets livereload serve open"
   },
   "author": "",
   "license": "ISC",
