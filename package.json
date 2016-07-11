@@ -20,10 +20,10 @@
   "devDependencies": {
     "jade": "^1.11.0",
     "livereload": "^0.4.1",
-    "npm-run-all": "^1.7.0",
+    "npm-run-all": "^2.3.0",
     "serve": "^1.4.0",
     "stylus": "^0.54.2",
-    "watch": "^0.17.1",
+    "watch": "^0.19.1",
     "webpack": "^1.13.0"
   }
 }
