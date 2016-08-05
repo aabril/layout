@@ -13,13 +13,13 @@
     "clean": "rm -rf ./dist/*",
     "serve": "./node_modules/serve/bin/serve dist/",
     "livereload": "./node_modules/livereload/bin/livereload.js ./dist",
-    "start": "./node_modules/npm-run-all/bin/npm-run-all.js clean --parallel jade stylus js copy-assets livereload serve"
+    "start": "npm-run-all clean --parallel jade stylus js copy-assets livereload serve"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jade": "^1.11.0",
-    "livereload": "^0.4.1",
+    "livereload": "^0.5.0",
     "npm-run-all": "^2.3.0",
     "serve": "^1.4.0",
     "stylus": "^0.54.2",
