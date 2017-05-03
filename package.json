@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "jade": "./node_modules/jade/bin/jade.js --watch src/jade/index.jade -o dist/",
-    "pug": "pug --watch src/pug/index.pug",
+    "pug": "pug --watch src/pug/index.pug --out dist",
     "stylus": "./node_modules/stylus/bin/stylus --watch --compress src/stylus/main.styl -o dist/style.min.css",
     "js": "./node_modules/webpack/bin/webpack.js --optimize-minimize --watch src/js/main.js dist/bundle.min.js",
     "stylus-dev": "./node_modules/stylus/bin/stylus --watch src/stylus/main.styl -o dist/style.min.css",
@@ -13,12 +12,11 @@
     "clean": "rm -rf ./dist/*",
     "serve": "./node_modules/serve/bin/serve.js dist/",
     "livereload": "./node_modules/livereload/bin/livereload.js ./dist",
-    "start": "npm-run-all clean --parallel jade stylus js copy-assets livereload serve"
+    "start": "npm-run-all clean --parallel pug stylus js copy-assets livereload serve"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jade": "^1.11.0",
     "livereload": "^0.6.2",
     "npm-run-all": "^4.0.2",
     "pug-cli": "^1.0.0-alpha6",
